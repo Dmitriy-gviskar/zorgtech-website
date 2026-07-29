@@ -1,0 +1,114 @@
+## Напольные сенсорные терминалы (Diamant F)
+  Apriori | /catalog/product/apriori/
+  Apriori 19 Keyboard | /catalog/product/apriori-19-keyboard/
+  Apriori 19 Print | /catalog/product/apriori-19-print/
+  Apriori 19 Print A4 | /catalog/product/apriori-19-print-a4/
+  Apriori 22 | /catalog/product/apriori-22/
+  Apriori 22 Key | /catalog/product/apriori-22-key/
+  Diamant 22 F | /catalog/product/diamant-22-f/
+  Diamant 32 F | /catalog/product/diamant-32-f/
+  Diamant 32 F General | /catalog/product/diamant-32-f-general/
+  Diamant 32 F Key | /catalog/product/diamant-32-f-key/
+  Diamant 32 F Print | /catalog/product/diamant-32-f-print/
+  Diamant 32 Fe | /catalog/product/diamant-32-fe/
+  Diamant 32 Fe Pro | /catalog/product/diamant-32-fe-pro/
+  Diamant 43 F | /catalog/product/diamant-43-f/
+  Diamant 43 F General | /catalog/product/diamant-43-f-general/
+  Diamant 43 F Print | /catalog/product/diamant-43-f-print/
+  Diamant 43 Fl | /catalog/product/diamant-43-fl/
+  Diamant 49 F | /catalog/product/diamant-49-f/
+  Diamant 49 F General | /catalog/product/diamant-49-f-general/
+  Diamant 49 F Print | /catalog/product/diamant-49-f-print/
+  Diamant 49 F Retail | /catalog/product/diamant-49-f-retail/
+  Diamant 55 F | /catalog/product/diamant-55-f/
+  Diamant 65 F | /catalog/product/diamant-65-f/
+  Diamant 75 F | /catalog/product/diamant-75-f/
+  Diamant 86 F Grand | /catalog/product/diamant-86-f-grand/
+  Interaktivnyy Kiosk Apriori 19 Print | /catalog/product/interaktivnyy-kiosk-apriori-19-print/
+  Mono 32 F | /catalog/product/mono-32-f/
+  Mono 32 F Scan | /catalog/product/mono-32-f-scan/
+  Mono 43 F | /catalog/product/mono-43-f/
+
+## Сенсорные столы (Diamant N)
+  Diamant 22 N | /catalog/product/diamant-22-n/
+  Diamant 32 N | /catalog/product/diamant-32-n/
+  Diamant 32 Ne | /catalog/product/diamant-32-ne/
+  Diamant 43 N | /catalog/product/diamant-43-n/
+  Diamant 49 N | /catalog/product/diamant-49-n/
+  Diamant 55 N | /catalog/product/diamant-55-n/
+  Diamant 55 Ne | /catalog/product/diamant-55-ne/
+  Mono 32 N | /catalog/product/mono-32-n/
+  Mono 55 T | /catalog/product/mono-55-t/
+
+## Настенные сенсорные терминалы (Diamant W)
+  Diamant 22 W | /catalog/product/diamant-22-w/
+  Diamant 32 W | /catalog/product/diamant-32-w/
+  Diamant 32 W Print | /catalog/product/diamant-32-w-print/
+  Diamant 32 We | /catalog/product/diamant-32-we/
+  Diamant 43 W | /catalog/product/diamant-43-w/
+  Diamant 49 W | /catalog/product/diamant-49-w/
+  Diamant 55 W | /catalog/product/diamant-55-w/
+  Mono 19 F | /catalog/product/mono-19-f/
+
+## Сенсорные терминалы MONO
+  Mono 32 F | /catalog/product/mono-32-f/
+  Mono 32 F Scan | /catalog/product/mono-32-f-scan/
+  Mono 43 F | /catalog/product/mono-43-f/
+
+## Сенсорные киоски Apriori
+  Apriori | /catalog/product/apriori/
+  Apriori 19 Keyboard | /catalog/product/apriori-19-keyboard/
+  Apriori 19 Print | /catalog/product/apriori-19-print/
+  Apriori 19 Print A4 | /catalog/product/apriori-19-print-a4/
+  Apriori 22 | /catalog/product/apriori-22/
+  Apriori 22 Key | /catalog/product/apriori-22-key/
+  Interaktivnyy Kiosk Apriori 19 Print | /catalog/product/interaktivnyy-kiosk-apriori-19-print/
+
+## Уличные сенсорные терминалы
+  Diamant 46 F Outdoor | /catalog/product/diamant-46-f-outdoor/
+  Diamant 55 F Outdoor | /catalog/product/diamant-55-f-outdoor/
+  Diamant 55 F Outdoor Dual | /catalog/product/diamant-55-f-outdoor-dual/
+
+## Автокассы
+  Diamant 32 Wa Pay | /catalog/product/diamant-32-wa-pay/
+  Diamant 32 Wea Pay | /catalog/product/diamant-32-wea-pay/
+  Mono 32 Fa Pin | /catalog/product/mono-32-fa-pin/
+
+## Дезинфекторы рук
+  Beskontaktnyy Dezinfektor Agat 5 | /catalog/product/beskontaktnyy-dezinfektor-agat-5/
+  Beskontaktnyy Dezinfektor Agat 7 | /catalog/product/beskontaktnyy-dezinfektor-agat-7/
+  Beskontaktnyy Dezinfektor Agat 9 | /catalog/product/beskontaktnyy-dezinfektor-agat-9/
+
+## Отраслевые сенсорные киоски
+  Diamant Intercon | /catalog/product/diamant-intercon/
+  Diamant Tmedical | /catalog/product/diamant-tmedical/
+
+## Детские сенсорные столы
+  Eco Kid 22 | /catalog/product/eco-kid-22/
+  Eco Kid 32 | /catalog/product/eco-kid-32/
+
+## Киоски самообслуживания
+  Diamant 32 W Pay | /catalog/product/diamant-32-w-pay/
+  Diamant 32 We Pay | /catalog/product/diamant-32-we-pay/
+  Mono 32 F Pin | /catalog/product/mono-32-f-pin/
+
+## Готовые решения
+  Dlya Meditsinskikh Uchrezhdeniy Medkiosk | /gotovye-resheniya/dlya-meditsinskikh-uchrezhdeniy-medkiosk/
+  Dlya Oteley Otelkiosk | /gotovye-resheniya/dlya-oteley-otelkiosk/
+  Gid Pokupatelya | /gotovye-resheniya/gid-pokupatelya/
+  Gid Uchashchegosya | /gotovye-resheniya/gid-uchashchegosya/
+  Gosinform | /gotovye-resheniya/gosinform/
+  Interaktivnaya Navigatsiya Logicmap | /gotovye-resheniya/interaktivnaya-navigatsiya-logicmap/
+  Muzeynyy Gid | /gotovye-resheniya/muzeynyy-gid/
+  Ofiskiosk | /gotovye-resheniya/ofiskiosk/
+  Virtualnyy Gid | /gotovye-resheniya/virtualnyy-gid/
+
+## Реализованные проекты (текст страницы)
+  Отелькиоск Медкиоск Интерактивная навигация Logicmap Госинформ Музейный Гид Гид учащегося Виртуальный гид Офискиоск Гид покупателя Все готовые решения Реализованные проекты Доставка и сервис Аренда О компании Блог Поддержка Контакты x Отдел продаж: Россия, Московская область, г.
+  Университетская, д.
+  Отелькиоск Медкиоск Интерактивная навигация Logicmap Госинформ Музейный Гид Гид учащегося Виртуальный гид Офискиоск Гид покупателя Все готовые решения Реализованные проекты Доставка и сервис Аренда Главная Реализованые проекты Реализованные проекты компании Zorgtech Как мы разгрузили службу охраны труда, терминалы для обучения и контроля Как мы разгрузили службу охраны труда, терминалы для обучения и контроля Подробнее Новые стандарты банковского обслуживания Новые стандарты банковского обслуживания Подробнее Масштабный проект по оснащению новых поликлиник г.
+  клиник г.
+  вокзала &quot;Саларьево&quot; для Мосгортранса Автоматизация автовокзала &quot;Саларьево&quot; для Мосгортранса Подробнее Создание интерактивной экспозиции музея &quot;Государева Дорога&quot; в храмовом комплексе &quot;Завидово&quot; Создание интерактивной экспозиции музея &quot;Государева Дорога&quot; в храмовом комплексе &quot;Завидово&quot; Подробнее Создание безопасного доступа к корпоративному порталу компании Акрихин на сенсорных киосках через защищенный браузер Создание безопасного доступа к корпоративному порталу компании Акрихин на сенсорных киосках через защищенный браузер Подробнее Автоматизация промышленных процессов в международной золотодобывающей компании Nordgold Автоматизация промышленных процессов в международной золотодобывающей компании Nordgold Подробнее Загрузить еще 12 НЕ ЗНАЕТЕ, С ЧЕГО НАЧАТЬ? Закажите обратный звонок Оставьте свой номер, наш специалист свяжется с вами и поможет сделать правильный выбор Изучите готовые решения Мы подготовили типовые варианты решений самых популярных задач разных типов бизнеса Посетите каталог И выберите отдельную сенсорную панель, подходящую вашим требованиям #comp_99ea1fe6e74c64fb1502e6474502408b { display: flex; width: 100%; } .
+  Университетская, д.
+  Отелькиоск Медкиоск Интерактивная навигация Logicmap Госинформ Музейный Гид Гид учащегося Виртуальный гид Офискиоск Гид покупателя Доставка и сервис Региональное обслуживание Гарантийное и пост гарантийное обслуживание Доставка Центр обновления драйверов © 2010-2026&nbsp;Zorgtech Зарегистрированная товарная марка Zorgtech.
+

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Zorgtech — Интерактивное оборудование</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-weight:400;font-size:17px;line-height:1.47059;letter-spacing:-0.003em;
+  color:#1d1d1f;background:#fff
+}
+:root{--r:28px}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:52px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px)
+}
+.nav-inner{
+  width:100%;max-width:1200px;padding:0 40px;
+  display:flex;align-items:center;justify-content:space-between
+}
+.nav-logo{font-size:21px;font-weight:700;color:#1d1d1f;text-decoration:none;letter-spacing:-0.015em}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:12px;font-weight:400;color:#1d1d1f;text-decoration:none;letter-spacing:-0.005em;transition:color .15s}
+.nav-links a:hover{color:#0071e3}
+.nav-cta{font-size:12px;font-weight:400;color:#0071e3;text-decoration:none}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;
+  text-align:center;background:#f5f5f7;padding:120px 40px 0
+}
+.hero-eyebrow{font-size:17px;font-weight:500;color:#86868b;margin-bottom:12px}
+.hero-title{
+  font-size:clamp(48px,8vw,88px);font-weight:700;color:#1d1d1f;
+  letter-spacing:-0.015em;line-height:1.05;max-width:860px
+}
+.hero-sub{font-size:21px;font-weight:400;color:#707070;margin-top:14px;max-width:560px;line-height:1.38}
+.hero-cta{margin-top:28px}
+.hero-visual{
+  margin-top:72px;width:100%;max-width:1100px;flex:1;
+  display:flex;align-items:flex-end;justify-content:center;
+  min-height:0
+}
+.hero-visual img{
+  max-height:65vh;width:auto;max-width:100%;object-fit:contain;
+  display:block
+}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 32px;font-family:'Inter',sans-serif;font-size:17px;font-weight:500;
+  border-radius:980px;text-decoration:none;transition:background .2s;
+  cursor:pointer;border:none;letter-spacing:0
+}
+.btn-primary{background:#0071e3;color:#fff}
+.btn-primary:hover{background:#0077ed}
+.btn-text{background:transparent;color:#0071e3}
+.btn-text:hover{background:rgba(0,113,227,.06)}
+
+/* ── SECTIONS ── */
+.section{padding:120px 40px}
+.section-alt{background:#f5f5f7}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{
+  font-size:14px;font-weight:500;color:#0071e3;letter-spacing:.05em;
+  text-transform:uppercase;margin-bottom:10px
+}
+.section-heading{
+  font-size:40px;font-weight:600;color:#1d1d1f;
+  letter-spacing:.007em;line-height:1.15;margin-bottom:10px
+}
+.section-sub{font-size:21px;font-weight:400;color:#707070;line-height:1.38;max-width:600px;margin-bottom:64px}
+
+/* ── PRODUCT CARDS ── */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:#fff;border-radius:var(--r);overflow:hidden;
+  text-decoration:none;color:inherit;transition:transform .2s
+}
+.card:hover{transform:translateY(-2px)}
+.card-img{
+  width:100%;aspect-ratio:4/3;
+  background:#fafafa;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden
+}
+.card-img img{max-width:70%;max-height:80%;object-fit:contain;display:block}
+.card-body{padding:40px}
+.card-tag{
+  font-size:11px;font-weight:500;color:#0071e3;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:4px
+}
+.card-title{
+  font-size:21px;font-weight:600;color:#1d1d1f;letter-spacing:.009em;
+  line-height:1.2;margin-bottom:6px
+}
+.card-desc{font-size:14px;font-weight:400;color:#707070;line-height:1.5}
+.card-link{display:inline-block;margin-top:14px;font-size:17px;font-weight:500;color:#0071e3}
+
+/* ── SOLUTIONS ── */
+.solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sol-card{
+  background:#fff;border-radius:var(--r);padding:40px;
+  transition:transform .2s;text-decoration:none;color:inherit
+}
+.sol-card:hover{transform:translateY(-2px)}
+.sol-icon{
+  width:52px;height:52px;border-radius:16px;margin-bottom:20px;
+  display:flex;align-items:center;justify-content:center;font-size:22px
+}
+.sol-card h3{font-size:19px;font-weight:600;color:#1d1d1f;letter-spacing:.011em;margin-bottom:6px}
+.sol-card p{font-size:14px;color:#707070;line-height:1.5}
+
+/* ── BENEFITS ── */
+.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.benefit-num{
+  font-size:48px;font-weight:700;color:#0071e3;
+  letter-spacing:-0.015em;line-height:1;margin-bottom:8px
+}
+.benefit-item h3{font-size:19px;font-weight:600;color:#1d1d1f;letter-spacing:.011em;margin-bottom:6px}
+.benefit-item p{font-size:14px;color:#707070;line-height:1.5}
+
+/* ── PROJECTS ── */
+.projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.proj-card{
+  aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
+  position:relative;transition:transform .2s
+}
+.proj-card:nth-child(1){background:#d5d8dc}
+.proj-card:nth-child(2){background:#c8ccd2}
+.proj-card:nth-child(3){background:#dce0e4}
+.proj-card:nth-child(4){background:#d0d4d8}
+.proj-card:hover{transform:translateY(-2px)}
+.proj-label{
+  position:absolute;bottom:24px;left:24px;right:24px;
+  font-size:14px;font-weight:500;color:#1d1d1f;letter-spacing:-0.005em
+}
+
+/* ── CTA ── */
+.cta-section{text-align:center}
+.cta-section .section-heading{margin-bottom:18px}
+.cta-section .section-sub{margin-left:auto;margin-right:auto;margin-bottom:32px}
+.cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+.footer{background:#f5f5f7;padding:40px;font-size:12px;color:#86868b}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px
+}
+.footer-links{display:flex;gap:24px;list-style:none}
+.footer-links a{color:#474747;text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:#0071e3}
+
+@media(max-width:1024px){
+  .card-grid,.solutions-grid{grid-template-columns:repeat(2,1fr)}
+  .benefits-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .section{padding:80px 20px}
+  .nav-links{display:none}
+  .hero{padding:100px 20px 0}
+  .section-heading{font-size:32px}
+  .section-sub{font-size:17px;margin-bottom:40px}
+  .card-grid,.solutions-grid,.benefits-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Zorgtech</a>
+    <ul class="nav-links">
+      <li><a href="#products">Продукция</a></li>
+      <li><a href="#solutions">Решения</a></li>
+      <li><a href="#benefits">Возможности</a></li>
+      <li><a href="#projects">Проекты</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <a href="tel:88005502645" class="nav-cta">8 800 550-26-45</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Российский производитель интерактивного оборудования</p>
+  <h1 class="hero-title">Оборудование,<br>к&nbsp;которому хочется<br>прикоснуться</h1>
+  <p class="hero-sub">Сенсорные киоски, столы и&nbsp;терминалы для бизнеса, государства и&nbsp;образования. Проектируем, производим, программируем.</p>
+  <div class="hero-cta">
+    <a href="#products" class="btn btn-primary">Смотреть продукцию</a>
+  </div>
+  <div class="hero-visual">
+    <img src="img/ad892332ab2c9820671bd13fd80ddcfd.png" alt="Diamant F — напольный сенсорный терминал">
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="section-inner">
+    <p class="section-label">Продукция</p>
+    <h2 class="section-heading">Широкая линейка оборудования</h2>
+    <p class="section-sub">От&nbsp;компактных настенных терминалов до&nbsp;уличных всепогодных киосков&nbsp;&mdash; производим решение под любую задачу.</p>
+    <div class="card-grid">
+      <a href="#" class="card">
+        <div class="card-img">
+          <img src="img/ad892332ab2c9820671bd13fd80ddcfd.png" alt="Diamant F">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Напольные</p>
+          <h3 class="card-title">Diamant&nbsp;F Multitouch</h3>
+          <p class="card-desc">Информационные терминалы от&nbsp;32″ до&nbsp;86″. Антивандальное исполнение, встроенный ПК.</p>
+          <span class="card-link">Подробнее &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <div class="card-img">
+          <img src="img/1u9jbdym7onkf1xblb2mjtdxwu9aazdl.png" alt="Diamant N">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Столы</p>
+          <h3 class="card-title">Diamant&nbsp;N Multitouch</h3>
+          <p class="card-desc">Сенсорные столы для музеев, школ и&nbsp;переговорных. До&nbsp;60 одновременных касаний.</p>
+          <span class="card-link">Подробнее &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="card">
+        <div class="card-img">
+          <img src="img/a688c0812e06ff8858036a49e6fa1eb2.png" alt="Diamant W">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Настенные</p>
+          <h3 class="card-title">Diamant&nbsp;W Multitouch</h3>
+          <p class="card-desc">Компактные терминалы для ресепшн, навигации и&nbsp;самообслуживания.</p>
+          <span class="card-link">Подробнее &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="solutions">
+  <div class="section-inner">
+    <p class="section-label">Готовые решения</p>
+    <h2 class="section-heading">Софт и&nbsp;сценарии под ключ</h2>
+    <p class="section-sub">Предустановленное ПО для гостиниц, музеев, медучреждений и&nbsp;госструктур&nbsp;&mdash; запускается сразу.</p>
+    <div class="solutions-grid">
+      <a href="#" class="sol-card">
+        <div class="sol-icon" style="background:#e8f0fe;color:#1a73e8">&#x1F3E8;</div>
+        <h3>ОтельКиоск</h3>
+        <p>Регистрация гостей, информация об&nbsp;услугах, карта отеля, заказ трансфера.</p>
+      </a>
+      <a href="#" class="sol-card">
+        <div class="sol-icon" style="background:#e6f4ea;color:#137333">&#x1F3E5;</div>
+        <h3>МедКиоск</h3>
+        <p>Электронная очередь, запись к&nbsp;врачу, маршрутизация по&nbsp;клинике.</p>
+      </a>
+      <a href="#" class="sol-card">
+        <div class="sol-icon" style="background:#fce8e6;color:#c5221f">&#x1F3DB;</div>
+        <h3>Музейный Гид</h3>
+        <p>Интерактивные экспозиции, дополненная реальность, квесты.</p>
+      </a>
+      <a href="#" class="sol-card">
+        <div class="sol-icon" style="background:#fef7e0;color:#ea8600">&#x1F3E2;</div>
+        <h3>ГосИнформ</h3>
+        <p>Госуслуги, информационные табло, навигация по&nbsp;учреждению.</p>
+      </a>
+      <a href="#" class="sol-card">
+        <div class="sol-icon" style="background:#e8eaf6;color:#3f51b5">&#x1F4CD;</div>
+        <h3>Logicmap</h3>
+        <p>3D-навигация для ТЦ, аэропортов и&nbsp;больших пространств.</p>
+      </a>
+      <a href="#" class="sol-card">
+        <div class="sol-icon" style="background:#f3e8fd;color:#7b1fa2">&#x1F4BC;</div>
+        <h3>ОфисКиоск</h3>
+        <p>Пропускная система, бронирование переговорных, навигация.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="benefits">
+  <div class="section-inner">
+    <p class="section-label">Почему Zorgtech</p>
+    <h2 class="section-heading">Производство полного цикла</h2>
+    <p class="section-sub">Проектируем, собираем, программируем и&nbsp;обслуживаем&nbsp;&mdash; всё в&nbsp;одной компании.</p>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-num">12</div>
+        <h3>Линеек</h3>
+        <p>От&nbsp;детских столов до&nbsp;промышленных уличных киосков.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-num">600+</div>
+        <h3>Проектов</h3>
+        <p>По&nbsp;всей России, Беларуси и&nbsp;Казахстану.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-num">9</div>
+        <h3>Решений</h3>
+        <p>Предустановленное ПО для ключевых отраслей.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-num">72ч</div>
+        <h3>Поддержка</h3>
+        <p>Решение вопросов в&nbsp;течение трёх рабочих дней.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="projects">
+  <div class="section-inner">
+    <p class="section-label">Проекты</p>
+    <h2 class="section-heading">Оборудование в&nbsp;деле</h2>
+    <p class="section-sub">Наши терминалы работают в&nbsp;аэропортах, музеях, отелях и&nbsp;госучреждениях по&nbsp;всей стране.</p>
+    <div class="projects-grid">
+      <div class="proj-card"><div class="proj-label">Аэропорт Курумоч</div></div>
+      <div class="proj-card"><div class="proj-label">Музей Думы</div></div>
+      <div class="proj-card"><div class="proj-label">Автовокзал Саларьево</div></div>
+      <div class="proj-card"><div class="proj-label">Nordgold</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section" id="contacts">
+  <div class="section-inner">
+    <h2 class="section-heading">Обсудим ваш проект</h2>
+    <p class="section-sub">Подберём оборудование и&nbsp;рассчитаем стоимость за&nbsp;24&nbsp;часа.</p>
+    <div class="cta-buttons">
+      <a href="tel:88005502645" class="btn btn-primary">8 800 550-26-45</a>
+      <a href="mailto:sale@zorgtech.ru" class="btn btn-text">sale@zorgtech.ru</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>&copy;&nbsp;2026 Zorgtech. Производство интерактивного оборудования.</span>
+    <ul class="footer-links">
+      <li><a href="#">О компании</a></li>
+      <li><a href="#">Блог</a></li>
+      <li><a href="#">Поддержка</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
