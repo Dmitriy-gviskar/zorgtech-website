@@ -1,0 +1,417 @@
+{
+  "ulichnye": {
+    "name": "Diamant 55 F Outdoor Dual",
+    "products": [
+      {
+        "slug": "diamant-46-f-outdoor",
+        "name": "Diamant 46 F Outdoor",
+        "img": "/upload/iblock/05c/05ce2e87d803bc87cb656706353fdb69.png"
+      },
+      {
+        "slug": "diamant-55-f-outdoor",
+        "name": "Diamant 55 F Outdoor",
+        "img": "/upload/iblock/629/6293c065291badf2ccc95de7db95c0a1.png"
+      },
+      {
+        "slug": "diamant-55-f-outdoor-dual",
+        "name": "Diamant 55 F Outdoor Dual",
+        "img": "/upload/iblock/97e/97e1edeebf36fe696ea74011345fb666.png"
+      }
+    ]
+  },
+  "napolnye": {
+    "name": "Mono 43 F",
+    "products": [
+      {
+        "slug": "apriori",
+        "name": "Apriori",
+        "img": "/upload/iblock/8cb/8cbb845b87131c1d2361ced5394e6279.png"
+      },
+      {
+        "slug": "apriori-19-keyboard",
+        "name": "Apriori 19 Keyboard",
+        "img": "/upload/iblock/d0a/d0a77bfea9ae8bf06493e85ba0756a6f.png"
+      },
+      {
+        "slug": "apriori-19-print",
+        "name": "Apriori 19 Print",
+        "img": "/upload/iblock/ed5/ed50ff26f4179bc344ef3e0cd1f557b5.png"
+      },
+      {
+        "slug": "apriori-19-print-a4",
+        "name": "Apriori 19 Print A4",
+        "img": "/upload/iblock/c08/c08ad0eaad01bb7bc5c0b5a5eb578239.png"
+      },
+      {
+        "slug": "apriori-22",
+        "name": "Apriori 22",
+        "img": "/upload/iblock/379/3796f509a45d937e8d5f4078fb8d3096.png"
+      },
+      {
+        "slug": "apriori-22-key",
+        "name": "Apriori 22 Key",
+        "img": "/upload/iblock/43b/43b838e29b06524062b2420ed2c7d7d2.png"
+      },
+      {
+        "slug": "diamant-22-f",
+        "name": "Diamant 22 F",
+        "img": "/upload/iblock/57f/57ff28340bba6d1b65a33a57abe1cb4f.png"
+      },
+      {
+        "slug": "diamant-32-f",
+        "name": "Diamant 32 F",
+        "img": "/upload/iblock/1ad/1adf9ac8cdb025994dedd03e560f6c1c.png"
+      },
+      {
+        "slug": "diamant-32-f-general",
+        "name": "Diamant 32 F General",
+        "img": "/upload/iblock/dda/dda7c4e37012a3b6129c9262e4aefce2.png"
+      },
+      {
+        "slug": "diamant-32-f-key",
+        "name": "Diamant 32 F Key",
+        "img": "/upload/iblock/895/8956b88767acd1947a53800d88882bbf.png"
+      },
+      {
+        "slug": "diamant-32-f-print",
+        "name": "Diamant 32 F Print",
+        "img": "/upload/iblock/56a/56af95a3a00caba66b6d5122c8be7d1a.jpg"
+      },
+      {
+        "slug": "diamant-32-fe",
+        "name": "Diamant 32 Fe",
+        "img": "/upload/iblock/3b7/3b72aaeb90700fb27ca634821a3d2343.png"
+      },
+      {
+        "slug": "diamant-32-fe-pro",
+        "name": "Diamant 32 Fe Pro",
+        "img": "/upload/iblock/cdc/cdc2a175e05f26616571fe3e153d2daf.png"
+      },
+      {
+        "slug": "diamant-43-f",
+        "name": "Diamant 43 F",
+        "img": "/upload/iblock/1d2/1d2c8ff07928bae432573591f4e01a4c.png"
+      },
+      {
+        "slug": "diamant-43-f-general",
+        "name": "Diamant 43 F General",
+        "img": "/upload/iblock/e37/e3714a40ee836fb113781fbbe46d2637.jpg"
+      },
+      {
+        "slug": "diamant-43-f-print",
+        "name": "Diamant 43 F Print",
+        "img": "/upload/iblock/3eb/3eb62d1ac758b1a3b6d5f2d7ff59646d.png"
+      },
+      {
+        "slug": "diamant-43-fl",
+        "name": "Diamant 43 Fl",
+        "img": "/upload/iblock/456/9bq2xgytmyjp1n4jwkd891ag90g829gy.png"
+      },
+      {
+        "slug": "diamant-49-f",
+        "name": "Diamant 49 F",
+        "img": "/upload/iblock/821/821c0e988e776e4d31ed9ddc57fcac88.png"
+      },
+      {
+        "slug": "diamant-49-f-general",
+        "name": "Diamant 49 F General",
+        "img": "/upload/iblock/1fc/1fcb5e8762e544f22bdd61e438fa8a06.png"
+      },
+      {
+        "slug": "diamant-49-f-print",
+        "name": "Diamant 49 F Print",
+        "img": "/upload/iblock/1bb/1bb06fccb59f7a193b5f00107585a081.jpg"
+      },
+      {
+        "slug": "diamant-49-f-retail",
+        "name": "Diamant 49 F Retail",
+        "img": "/upload/iblock/db9/db9372c8e0f3a4735e1c0839a60cc744.png"
+      },
+      {
+        "slug": "diamant-55-f",
+        "name": "Diamant 55 F",
+        "img": "/upload/iblock/0e1/0e13a1c0a51c5230d4cdcba60127118a.png"
+      },
+      {
+        "slug": "diamant-65-f",
+        "name": "Diamant 65 F",
+        "img": "/upload/iblock/305/305cfea4bf3dfd3f8f7c01c87f325cf6.png"
+      },
+      {
+        "slug": "diamant-75-f",
+        "name": "Diamant 75 F",
+        "img": "/upload/iblock/343/3430adaa41cd22aac92b3829599a6eda.png"
+      },
+      {
+        "slug": "diamant-86-f-grand",
+        "name": "Diamant 86 F Grand",
+        "img": "/upload/iblock/ac0/ac0ac969a9199943cd9bd3942914c294.png"
+      },
+      {
+        "slug": "interaktivnyy-kiosk-apriori-19-print",
+        "name": "Interaktivnyy Kiosk Apriori 19 Print",
+        "img": "/upload/iblock/020/02033947ce0326042d97f7ace1c3ecdd.png"
+      },
+      {
+        "slug": "mono-32-f",
+        "name": "Mono 32 F",
+        "img": "/upload/iblock/b9d/b9df83dae61376dc45015ed196be7853.png"
+      },
+      {
+        "slug": "mono-32-f-scan",
+        "name": "Mono 32 F Scan",
+        "img": "/upload/iblock/e92/e924c6271f23f5512fceeee026880d83.png"
+      },
+      {
+        "slug": "mono-43-f",
+        "name": "Mono 43 F",
+        "img": "/upload/iblock/136/136ade3a8b0b6f8d740e63b7574941a1.png"
+      }
+    ]
+  },
+  "stoly": {
+    "name": "Mono 55 T",
+    "products": [
+      {
+        "slug": "diamant-22-n",
+        "name": "Diamant 22 N",
+        "img": "/upload/iblock/988/9882f343917d3200604aa5d3880fa181.png"
+      },
+      {
+        "slug": "diamant-32-n",
+        "name": "Diamant 32 N",
+        "img": "/upload/iblock/3b0/3b0a5c3db10bd1aa90fe8c980cebc1c4.png"
+      },
+      {
+        "slug": "diamant-32-ne",
+        "name": "Diamant 32 Ne",
+        "img": "/upload/iblock/03c/03ca4d608fd3d4eb0b29230756137d37.png"
+      },
+      {
+        "slug": "diamant-43-n",
+        "name": "Diamant 43 N",
+        "img": "/upload/iblock/874/874bd0bb26afd18a9b27d91648184497.jpg"
+      },
+      {
+        "slug": "diamant-49-n",
+        "name": "Diamant 49 N",
+        "img": "/upload/iblock/bb3/bb3f49cc939b3be4e433484c67e04860.jpg"
+      },
+      {
+        "slug": "diamant-55-n",
+        "name": "Diamant 55 N",
+        "img": "/upload/iblock/08d/08dbd23e017293b5c64692eb701f9531.png"
+      },
+      {
+        "slug": "diamant-55-ne",
+        "name": "Diamant 55 Ne",
+        "img": "/upload/iblock/2cd/2cd174c968d8add616dbbf40d2e67cd3.png"
+      },
+      {
+        "slug": "mono-32-n",
+        "name": "Mono 32 N",
+        "img": "/upload/iblock/dfd/dfdb49d7db496f272aae05422152c9af.png"
+      },
+      {
+        "slug": "mono-55-t",
+        "name": "Mono 55 T",
+        "img": "/upload/iblock/79a/79ad9f8680b1242e34e6c667d0d92e4c.png"
+      }
+    ]
+  },
+  "nastennyy": {
+    "name": "Mono 19 F",
+    "products": [
+      {
+        "slug": "diamant-22-w",
+        "name": "Diamant 22 W",
+        "img": "/upload/iblock/92d/92d9a6617405597b15bd4916f46216cd.png"
+      },
+      {
+        "slug": "diamant-32-w",
+        "name": "Diamant 32 W",
+        "img": "/upload/iblock/2ff/2fffdd05e90e9ce7d5f0016ef71bc9a6.png"
+      },
+      {
+        "slug": "diamant-32-w-print",
+        "name": "Diamant 32 W Print",
+        "img": "/upload/iblock/b62/b62d1f45d3e9e5d37e8ee2e9406ba57d.png"
+      },
+      {
+        "slug": "diamant-32-we",
+        "name": "Diamant 32 We",
+        "img": "/upload/iblock/eae/eaeadb732c37bc41516dd20b4a74564e.png"
+      },
+      {
+        "slug": "diamant-43-w",
+        "name": "Diamant 43 W",
+        "img": "/upload/iblock/500/500636041f7d368d2173552259edefed.png"
+      },
+      {
+        "slug": "diamant-49-w",
+        "name": "Diamant 49 W",
+        "img": "/upload/iblock/b00/b0010fe683e763e89154d7c6934c1fbf.png"
+      },
+      {
+        "slug": "diamant-55-w",
+        "name": "Diamant 55 W",
+        "img": "/upload/iblock/00e/00eb3b5d01186c9ddaf3fbb7fb3bdf4d.png"
+      },
+      {
+        "slug": "mono-19-f",
+        "name": "Mono 19 F",
+        "img": "/upload/iblock/fed/fedae52c35498a37ff06311125c1cd3e.png"
+      }
+    ]
+  },
+  "mono": {
+    "name": "Mono 43 F",
+    "products": [
+      {
+        "slug": "mono-32-f",
+        "name": "Mono 32 F",
+        "img": "/upload/iblock/b9d/b9df83dae61376dc45015ed196be7853.png"
+      },
+      {
+        "slug": "mono-32-f-scan",
+        "name": "Mono 32 F Scan",
+        "img": "/upload/iblock/e92/e924c6271f23f5512fceeee026880d83.png"
+      },
+      {
+        "slug": "mono-43-f",
+        "name": "Mono 43 F",
+        "img": "/upload/iblock/136/136ade3a8b0b6f8d740e63b7574941a1.png"
+      }
+    ]
+  },
+  "apriori": {
+    "name": "Interaktivnyy Kiosk Apriori 19 Print",
+    "products": [
+      {
+        "slug": "apriori",
+        "name": "Показать",
+        "img": "/upload/iblock/8cb/8cbb845b87131c1d2361ced5394e6279.png"
+      },
+      {
+        "slug": "apriori-19-keyboard",
+        "name": "Apriori 19 Keyboard",
+        "img": "/upload/iblock/d0a/d0a77bfea9ae8bf06493e85ba0756a6f.png"
+      },
+      {
+        "slug": "apriori-19-print",
+        "name": "Apriori 19 Print",
+        "img": "/upload/iblock/ed5/ed50ff26f4179bc344ef3e0cd1f557b5.png"
+      },
+      {
+        "slug": "apriori-19-print-a4",
+        "name": "Apriori 19 Print A4",
+        "img": "/upload/iblock/c08/c08ad0eaad01bb7bc5c0b5a5eb578239.png"
+      },
+      {
+        "slug": "apriori-22",
+        "name": "Apriori 22",
+        "img": "/upload/iblock/379/3796f509a45d937e8d5f4078fb8d3096.png"
+      },
+      {
+        "slug": "apriori-22-key",
+        "name": "Apriori 22 Key",
+        "img": "/upload/iblock/43b/43b838e29b06524062b2420ed2c7d7d2.png"
+      },
+      {
+        "slug": "interaktivnyy-kiosk-apriori-19-print",
+        "name": "Interaktivnyy Kiosk Apriori 19 Print",
+        "img": "/upload/iblock/020/02033947ce0326042d97f7ace1c3ecdd.png"
+      }
+    ]
+  },
+  "avtokassy": {
+    "name": "Mono 32 Fa Pin",
+    "products": [
+      {
+        "slug": "diamant-32-wa-pay",
+        "name": "Diamant 32 Wa Pay",
+        "img": "/upload/iblock/ce0/ce00cf612495016507a5b08f9327c7d4.png"
+      },
+      {
+        "slug": "diamant-32-wea-pay",
+        "name": "Diamant 32 Wea Pay",
+        "img": "/upload/iblock/c28/c2837606b00b71c814dce8b0a79b97e2.jpg"
+      },
+      {
+        "slug": "mono-32-fa-pin",
+        "name": "Mono 32 Fa Pin",
+        "img": "/upload/iblock/c20/c207ec3290237f7b5bd0f54e1cffbdab.png"
+      }
+    ]
+  },
+  "dezinfektory": {
+    "name": "Beskontaktnyy Dezinfektor Agat 9",
+    "products": [
+      {
+        "slug": "beskontaktnyy-dezinfektor-agat-5",
+        "name": "Beskontaktnyy Dezinfektor Agat 5",
+        "img": "/upload/iblock/a68/a688c0812e06ff8858036a49e6fa1eb2.png"
+      },
+      {
+        "slug": "beskontaktnyy-dezinfektor-agat-7",
+        "name": "Beskontaktnyy Dezinfektor Agat 7",
+        "img": "/upload/iblock/5eb/5eba582633605f7603750e84b4859846.png"
+      },
+      {
+        "slug": "beskontaktnyy-dezinfektor-agat-9",
+        "name": "Beskontaktnyy Dezinfektor Agat 9",
+        "img": "/upload/iblock/6fe/6fe9b698ffc6d9ac9a49574b1e892fd4.png"
+      }
+    ]
+  },
+  "otraslevye": {
+    "name": "Diamant Tmedical",
+    "products": [
+      {
+        "slug": "diamant-intercon",
+        "name": "Diamant Intercon",
+        "img": "/upload/iblock/793/7930fe2d6188e0529d220c2fadb64342.png"
+      },
+      {
+        "slug": "diamant-tmedical",
+        "name": "Diamant Tmedical",
+        "img": "/upload/iblock/eca/ecab61e02216c5b1ec3af825c874bb44.png"
+      }
+    ]
+  },
+  "detskie": {
+    "name": "Eco Kid 32",
+    "products": [
+      {
+        "slug": "eco-kid-22",
+        "name": "Eco Kid 22",
+        "img": "/upload/iblock/e31/e319ecaced13fb7ceda4e9d3e6a88783.png"
+      },
+      {
+        "slug": "eco-kid-32",
+        "name": "Eco Kid 32",
+        "img": "/upload/iblock/c6a/c6a64ccc2305d6df44e69e72ea615889.png"
+      }
+    ]
+  },
+  "samoobsluzhivanie": {
+    "name": "Mono 32 F Pin",
+    "products": [
+      {
+        "slug": "diamant-32-w-pay",
+        "name": "Diamant 32 W Pay",
+        "img": "/upload/iblock/f1f/f1f0b9cdbd2ec68a62c9904c1d69a69e.png"
+      },
+      {
+        "slug": "diamant-32-we-pay",
+        "name": "Diamant 32 We Pay",
+        "img": "/upload/iblock/72a/72aeb990b821c002a3a7cc696c9a2853.jpg"
+      },
+      {
+        "slug": "mono-32-f-pin",
+        "name": "Mono 32 F Pin",
+        "img": "/upload/iblock/971/9712f650c5987df610ad02c482e6315d.png"
+      }
+    ]
+  }
+}
