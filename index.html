@@ -183,6 +183,10 @@ body{
 </head>
 <body>
 
+<button class="menu-btn" id="menuBtn" aria-label="Меню"><span></span></button>
+<div class="mobile-nav" id="mobileNav">
+<a href="catalog.html">Продукция</a><a href="solutions.html">Решения</a><a href="projects.html">Проекты</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a>
+</div>
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">Zorgtech</a>
@@ -354,6 +358,11 @@ body{
 </footer>
 
 <script>
+/* Mobile menu */
+const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav');
+menuBtn.addEventListener('click',()=>{mobileNav.classList.toggle('open')});
+mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+
 /* Staggered reveal */
 const revealObserver=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
