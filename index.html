@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,44 +10,48 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 <style>
+:root,[data-theme="light"]{--bg:#fff;--bg-el:#f5f5f7;--bg-el-h:#e8e8ed;--tx:#1d1d1f;--tx2:#86868b;--tx3:#6e6e73;--acc:#0071e3;--link:#0066cc;--nav-bg:rgba(255,255,255,.8);--nav-link:#6e6e73}
+[data-theme="dark"]{--bg:#000;--bg-el:#1d1d1f;--bg-el-h:#333336;--tx:#f5f5f7;--tx2:#86868b;--tx3:#424245;--acc:#0071e3;--link:#2997ff;--nav-bg:rgba(0,0,0,.72);--nav-link:#ccc}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;background:var(--bg)}
 body{
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight:400;font-size:17px;line-height:1.47059;letter-spacing:-0.003em;
-  color:#1d1d1f;background:#fff
+  color:var(--tx2);background:var(--bg);transition:background .4s,color .4s
 }
-:root{--r:28px}
 
 /* ── NAV ── */
 .nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;height:52px;
+  position:fixed;top:0;left:0;right:0;z-index:100;height:44px;
   display:flex;align-items:center;justify-content:center;
-  background:rgba(255,255,255,.72);
+  background:var(--nav-bg);
   backdrop-filter:saturate(180%) blur(20px);
   -webkit-backdrop-filter:saturate(180%) blur(20px)
 }
 .nav-inner{
-  width:100%;max-width:1200px;padding:0 40px;
+  width:100%;max-width:1440px;padding:0 40px;
   display:flex;align-items:center;justify-content:space-between
 }
-.nav-logo{font-size:21px;font-weight:700;color:#1d1d1f;text-decoration:none;letter-spacing:-0.015em}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-size:12px;font-weight:400;color:#1d1d1f;text-decoration:none;letter-spacing:-0.005em;transition:color .15s}
-.nav-links a:hover{color:#0071e3}
-.nav-cta{font-size:12px;font-weight:400;color:#0071e3;text-decoration:none}
+.nav-logo{font-size:17px;font-weight:600;color:var(--tx);text-decoration:none;letter-spacing:-0.01em}
+.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
+.nav-links a{font-size:12px;font-weight:400;color:var(--nav-link);text-decoration:none;letter-spacing:-0.12px;transition:color .2s}
+.nav-links a:hover{color:var(--tx)}
+.nav-cta{font-size:12px;font-weight:400;color:var(--acc);text-decoration:none}
+.toggle{width:44px;height:24px;border-radius:12px;border:none;background:var(--bg-el);cursor:pointer;position:relative}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:var(--tx);transition:transform .3s}
+[data-theme="dark"] .toggle::after{transform:translateX(20px)}
 
 /* ── HERO ── */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;align-items:center;
-  text-align:center;background:#f5f5f7;padding:120px 40px 0
+  text-align:center;background:var(--bg-el);padding:120px 40px 0
 }
-.hero-eyebrow{font-size:17px;font-weight:500;color:#86868b;margin-bottom:12px}
+.hero-eyebrow{font-size:17px;font-weight:500;color:var(--tx2);margin-bottom:12px}
 .hero-title{
-  font-size:clamp(48px,8vw,88px);font-weight:700;color:#1d1d1f;
+  font-size:clamp(48px,8vw,80px);font-weight:600;color:var(--tx);
   letter-spacing:-0.015em;line-height:1.05;max-width:860px
 }
-.hero-sub{font-size:21px;font-weight:400;color:#707070;margin-top:14px;max-width:560px;line-height:1.38}
+.hero-sub{font-size:21px;font-weight:400;color:var(--tx2);margin-top:14px;max-width:560px;line-height:1.38}
 .hero-cta{margin-top:28px}
 .hero-visual{
   margin-top:72px;width:100%;max-width:1100px;flex:1;
@@ -62,13 +66,13 @@ body{
 /* ── BUTTONS ── */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
-  padding:14px 32px;font-family:'Inter',sans-serif;font-size:17px;font-weight:500;
-  border-radius:980px;text-decoration:none;transition:background .2s;
-  cursor:pointer;border:none;letter-spacing:0
+  padding:14px 32px;font-family:'Inter',sans-serif;font-size:17px;font-weight:400;
+  border-radius:9999px;text-decoration:none;transition:background .2s;
+  cursor:pointer;border:none;letter-spacing:-0.022em
 }
-.btn-primary{background:#0071e3;color:#fff}
+.btn-primary{background:var(--acc);color:#fff}
 .btn-primary:hover{background:#0077ed}
-.btn-text{background:transparent;color:#0071e3}
+.btn-text{background:transparent;color:var(--acc)}
 .btn-text:hover{background:rgba(0,113,227,.06)}
 
 /* ── ANIMATIONS ── */
@@ -76,78 +80,74 @@ body{
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* ── SECTIONS ── */
-.section{padding:120px 40px}
-.section-alt{background:#f5f5f7}
+.section{padding:80px 40px}
+.section-alt{background:var(--bg-el)}
 .section-inner{max-width:1200px;margin:0 auto}
 .section-label{
-  font-size:14px;font-weight:500;color:#0071e3;letter-spacing:.05em;
+  font-size:14px;font-weight:500;color:var(--tx3);letter-spacing:.05em;
   text-transform:uppercase;margin-bottom:10px
 }
 .section-heading{
-  font-size:40px;font-weight:600;color:#1d1d1f;
-  letter-spacing:.007em;line-height:1.15;margin-bottom:10px
+  font-size:40px;font-weight:600;color:var(--tx);
+  letter-spacing:0;line-height:1.15;margin-bottom:10px
 }
-.section-sub{font-size:21px;font-weight:400;color:#707070;line-height:1.38;max-width:600px;margin-bottom:64px}
+.section-sub{font-size:21px;font-weight:400;color:var(--tx2);line-height:1.38;max-width:600px;margin-bottom:64px}
 
 /* ── PRODUCT CARDS ── */
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{
-  background:#fff;border-radius:var(--r);overflow:hidden;
+  background:var(--bg-el);border-radius:28px;overflow:hidden;
   text-decoration:none;color:inherit;transition:transform .2s
 }
 .card:hover{transform:translateY(-2px)}
 .card-img{
   width:100%;aspect-ratio:4/3;
-  background:#fafafa;
+  background:var(--bg);
   display:flex;align-items:center;justify-content:center;
   overflow:hidden
 }
 .card-img img{max-width:70%;max-height:80%;object-fit:contain;display:block}
 .card-body{padding:40px}
 .card-tag{
-  font-size:11px;font-weight:500;color:#0071e3;letter-spacing:.06em;
+  font-size:11px;font-weight:500;color:var(--tx3);letter-spacing:.06em;
   text-transform:uppercase;margin-bottom:4px
 }
 .card-title{
-  font-size:21px;font-weight:600;color:#1d1d1f;letter-spacing:.009em;
+  font-size:21px;font-weight:600;color:var(--tx);letter-spacing:.009em;
   line-height:1.2;margin-bottom:6px
 }
-.card-desc{font-size:14px;font-weight:400;color:#707070;line-height:1.5}
-.card-link{display:inline-block;margin-top:14px;font-size:17px;font-weight:500;color:#0071e3}
+.card-desc{font-size:14px;font-weight:400;color:var(--tx2);line-height:1.5}
+.card-link{display:inline-block;margin-top:14px;font-size:17px;font-weight:500;color:var(--acc)}
 
 /* ── SOLUTIONS ── */
 .solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .sol-card{
-  background:#fff;border-radius:var(--r);padding:40px;
+  background:var(--bg);border-radius:28px;padding:40px;
   transition:transform .2s;text-decoration:none;color:inherit
 }
 .sol-card:hover{transform:translateY(-2px)}
-.sol-card h3{font-size:19px;font-weight:600;color:#1d1d1f;letter-spacing:.011em;margin-bottom:6px}
-.sol-card p{font-size:14px;color:#707070;line-height:1.5}
+.sol-card h3{font-size:21px;font-weight:600;color:var(--tx);letter-spacing:.011em;margin-bottom:6px}
+.sol-card p{font-size:14px;color:var(--tx2);line-height:1.5}
 
 /* ── BENEFITS ── */
 .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
 .benefit-num{
-  font-size:48px;font-weight:700;color:#0071e3;
+  font-size:48px;font-weight:600;color:var(--acc);
   letter-spacing:-0.015em;line-height:1;margin-bottom:8px
 }
-.benefit-item h3{font-size:19px;font-weight:600;color:#1d1d1f;letter-spacing:.011em;margin-bottom:6px}
-.benefit-item p{font-size:14px;color:#707070;line-height:1.5}
+.benefit-item h3{font-size:21px;font-weight:600;color:var(--tx);letter-spacing:.011em;margin-bottom:6px}
+.benefit-item p{font-size:14px;color:var(--tx2);line-height:1.5}
 
 /* ── PROJECTS ── */
 .projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .proj-card{
-  aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
-  position:relative;transition:transform .2s
+  aspect-ratio:4/5;border-radius:28px;overflow:hidden;
+  position:relative;transition:transform .2s;background:var(--bg-el-h)
 }
-.proj-card:nth-child(1){background:#d5d8dc}
-.proj-card:nth-child(2){background:#c8ccd2}
-.proj-card:nth-child(3){background:#dce0e4}
-.proj-card:nth-child(4){background:#d0d4d8}
 .proj-card:hover{transform:translateY(-2px)}
 .proj-label{
   position:absolute;bottom:24px;left:24px;right:24px;
-  font-size:14px;font-weight:500;color:#1d1d1f;letter-spacing:-0.005em
+  font-size:14px;font-weight:500;color:var(--tx);letter-spacing:-0.005em
 }
 
 /* ── CTA ── */
@@ -157,14 +157,25 @@ body{
 .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* ── FOOTER ── */
-.footer{background:#f5f5f7;padding:40px;font-size:12px;color:#86868b}
+.footer{background:var(--bg-el);padding:40px;font-size:12px;color:var(--tx2)}
 .footer-inner{
   max-width:1200px;margin:0 auto;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px
 }
 .footer-links{display:flex;gap:24px;list-style:none}
-.footer-links a{color:#474747;text-decoration:none;transition:color .15s}
-.footer-links a:hover{color:#0071e3}
+.footer-links a{color:var(--tx2);text-decoration:none;transition:color .15s}
+.footer-links a:hover{color:var(--tx)}
+
+/* ── MOBILE NAV (was missing entirely — menu button + overlay rendered unstyled) ── */
+.menu-btn{display:none;width:28px;height:20px;position:fixed;top:12px;right:16px;cursor:pointer;z-index:101;background:none;border:none}
+.menu-btn span,.menu-btn::before,.menu-btn::after{content:"";position:absolute;left:0;width:100%;height:2px;background:var(--tx);border-radius:1px;transition:all .3s}
+.menu-btn::before{top:0}
+.menu-btn span{top:9px}
+.menu-btn::after{bottom:0}
+.mobile-nav{position:fixed;inset:0;background:var(--bg);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mobile-nav.open{opacity:1;pointer-events:all}
+.mobile-nav a{font-size:28px;font-weight:400;color:var(--tx);text-decoration:none}
+.mobile-nav a:hover{color:var(--acc)}
 
 @media(max-width:1024px){
   .card-grid,.solutions-grid{grid-template-columns:repeat(2,1fr)}
@@ -174,6 +185,7 @@ body{
 @media(max-width:640px){
   .section{padding:80px 20px}
   .nav-links{display:none}
+  .menu-btn{display:block}
   .hero{padding:100px 20px 0}
   .section-heading{font-size:32px}
   .section-sub{font-size:17px;margin-bottom:40px}
@@ -199,6 +211,7 @@ body{
       <li><a href="#benefits">Возможности</a></li>
       <li><a href="projects.html">Проекты</a></li>
       <li><a href="contacts.html">Контакты</a></li>
+      <li><button class="toggle" id="t" aria-label="Тема"></button></li>
     </ul>
     <a href="tel:88005502645" class="nav-cta">8 800 550-26-45</a>
   </div>
@@ -352,7 +365,7 @@ body{
   <div class="footer-inner">
     <span>&copy;&nbsp;2026 Zorgtech. Производство интерактивного оборудования.</span>
     <ul class="footer-links">
-      <li><a href="#">О компании</a></li>
+      <li><a href="about.html">О компании</a></li>
       <li><a href="blog.html">Блог</a></li>
       <li><a href="support.html">Поддержка</a></li>
       <li><a href="contacts.html">Контакты</a></li>
@@ -361,6 +374,11 @@ body{
 </footer>
 
 <script>
+/* Theme toggle */
+const h=document.documentElement,b=document.getElementById('t');
+b.addEventListener('click',()=>{const n=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=n;try{localStorage.setItem('zorgtech-theme',n)}catch(e){}});
+try{const s=localStorage.getItem('zorgtech-theme');if(s)h.dataset.theme=s}catch(e){}
+
 /* Mobile menu */
 const menuBtn=document.getElementById('menuBtn'),mobileNav=document.getElementById('mobileNav');
 menuBtn.addEventListener('click',()=>{mobileNav.classList.toggle('open')});
