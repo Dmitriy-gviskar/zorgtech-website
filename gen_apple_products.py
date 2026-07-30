@@ -1,4 +1,18 @@
 import json, re, os
+from PIL import Image
+
+BASE_DIR = '/Users/dmitri/Downloads/zorgtech-new'
+_dim_cache = {}
+def img_dims(rel_path):
+    if not rel_path:
+        return None
+    if rel_path not in _dim_cache:
+        try:
+            with Image.open(os.path.join(BASE_DIR, rel_path)) as im:
+                _dim_cache[rel_path] = im.size
+        except Exception:
+            _dim_cache[rel_path] = None
+    return _dim_cache[rel_path]
 
 with open('/Users/dmitri/Downloads/zorgtech-new/data/products_detail.json') as f:
     data = json.load(f)
@@ -6,10 +20,27 @@ with open('/Users/dmitri/Downloads/zorgtech-new/data/products_detail.json') as f
 with open('/Users/dmitri/Downloads/zorgtech-new/data/categories.json') as f:
     cats = json.load(f)
 
+# categories.json's own "name" field is corrupted for every category - it holds
+# the last product's title rather than the category name (e.g. "napolnye" -> "Mono 43 F").
+# These are the correct names, sourced from catalog.html's own hand-written cards.
+CATEGORY_NAMES = {
+    'napolnye': 'Diamant F Multitouch',
+    'stoly': 'Diamant N Multitouch',
+    'nastennyy': 'Diamant W Multitouch',
+    'mono': 'MONO Multitouch',
+    'apriori': 'Apriori',
+    'ulichnye': 'Уличные терминалы',
+    'avtokassy': 'Автокассы',
+    'dezinfektory': 'Дезинфекторы рук',
+    'otraslevye': 'Отраслевые киоски',
+    'detskie': 'Детские столы',
+    'samoobsluzhivanie': 'Киоски самообслуживания',
+}
+
 # Build cat slug -> name mapping
 cat_names = {}
 for slug, cat in cats.items():
-    cat_names[slug] = cat["name"]
+    cat_names[slug] = CATEGORY_NAMES.get(slug, cat["name"])
 
 def extract_features(desc_list, title):
     """Extract key features from description blocks."""
@@ -197,7 +228,8 @@ def make_lead(desc_list, title):
     sentences = re.split(r'(?<=[.!?])\s+', text)
     bad_words = ['продукция', 'diamant f', 'diamant n', 'diamant w', 'меню', 'каталог',
                  'купить за', 'заказать', 'звонок', 'бесплат', 'руб', 'р.', 'цена',
-                 'о компании', 'блог', 'поддержка', 'контакты', 'области применения']
+                 'о компании', 'блог', 'поддержка', 'контакты', 'области применения',
+                 'характеристики', 'тип установки', 'габариты', 'толщина корпуса']
     for s in sentences:
         s = s.strip()
         s = re.sub(r'^\W+', '', s)
@@ -207,7 +239,7 @@ def make_lead(desc_list, title):
         s = re.sub(r'за\s+\d[\d\s]+\s*р\.?', '', s)
         s = re.sub(r'цена\s+по\s+запросу', '', s, flags=re.IGNORECASE)
         s = re.sub(r'\s+', ' ', s).strip()
-        if len(s) > 40 and len(s) < 200:
+        if len(s) > 40 and len(s) < 240:
             if not any(w in s.lower() for w in bad_words):
                 # Remove leading garbage
                 s = re.sub(r'^[^А-ЯЁA-Z]+', '', s)
@@ -255,14 +287,18 @@ for slug, pdata in data.items():
     img_tag = ''
     thumbs_html = ''
     if images:
-        img_tag = f'<img src="{images[0]}" alt="{title}" id="mainImg">'
+        main_dims = img_dims(images[0])
+        main_size_attrs = f' width="{main_dims[0]}" height="{main_dims[1]}"' if main_dims else ""
+        img_tag = f'<img src="{images[0]}" alt="{title}" id="mainImg"{main_size_attrs}>'
         if len(images) > 1:
             thumbs_html = '<div class="thumbs">'
             for i, img in enumerate(images[:5]):
                 active = ' active' if i == 0 else ''
-                thumbs_html += f'<div class="thumb{active}" onclick="document.getElementById(\'mainImg\').src=\'{img}\';this.parentNode.querySelectorAll(\'.thumb\').forEach(t=>t.classList.remove(\'active\'));this.classList.add(\'active\')"><img src="{img}" alt=""></div>'
+                t_dims = img_dims(img)
+                t_size_attrs = f' width="{t_dims[0]}" height="{t_dims[1]}"' if t_dims else ""
+                thumbs_html += f'<div class="thumb{active}" onclick="document.getElementById(\'mainImg\').src=\'{img}\';this.parentNode.querySelectorAll(\'.thumb\').forEach(t=>t.classList.remove(\'active\'));this.classList.add(\'active\')"><img src="{img}" alt=""{t_size_attrs}></div>'
             thumbs_html += '</div>'
-    lead = make_lead(desc, title)
+    lead = make_lead(desc, title) or f"{title} — надёжное оборудование от Zorgtech с гарантией и сервисной поддержкой."
     features = extract_features(desc, title)
     applications = get_applications(cat_slug, title)
     
@@ -273,7 +309,10 @@ for slug, pdata in data.items():
     price = price_match.group(1).strip().replace(' ', '') if price_match else None
     btn_text = "Купить" if price else "Запросить цену"
     price_btn = f'<a href="tel:88005502645" class="btn btn-price"><span class="btn-price-val">{price_match.group(1).strip()} ₽</span><span class="btn-price-sub">Купить</span></a>' if price_match else '<a href="tel:88005502645" class="btn">Запросить цену</a>'
-    
+
+    meta_desc = f"{title} от Zorgtech — {cat_name}. Подробные характеристики, цена по запросу, доставка по России, Беларуси и Казахстану."
+    og_img = f"https://zorgtech.com/{images[0]}" if images else "https://zorgtech.com/img/ad892332ab2c9820671bd13fd80ddcfd.png"
+
     features_html = ""
     apps_html = ""
     for name, desc in applications:
@@ -282,12 +321,19 @@ for slug, pdata in data.items():
         features_html += f'<div class="feat"><h3>{name}</h3><p>{value}</p></div>\n'
     
     html = f"""<!DOCTYPE html><html lang="ru" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>{title} — Zorgtech</title>
+<meta name="description" content="{meta_desc}">
+<meta property="og:type" content="product">
+<meta property="og:title" content="{title} — Zorgtech">
+<meta property="og:description" content="{meta_desc}">
+<meta property="og:image" content="{og_img}">
+<meta property="og:url" content="https://zorgtech.com/product-{slug}.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&display=swap" rel="stylesheet">
 <style>{base_css}</style></head><body>
 <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">Zorgtech</a><ul class="nav-links"><li><a href="catalog.html">Продукция</a></li><li><a href="solutions.html">Решения</a></li><li><a href="projects.html">Проекты</a></li><li><a href="about.html">О компании</a></li><li><a href="contacts.html">Контакты</a></li><li><button class="toggle" id="t" aria-label="Тема"></button></li></ul></div></nav>
 <div class="mobile-nav" id="mobileNav"><a href="index.html">Главная</a><a href="catalog.html">Продукция</a><a href="solutions.html">Решения</a><a href="projects.html">Проекты</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a></div>
-<div class="page"><div class="page-inner">
+<main class="page"><div class="page-inner">
 <a href="cat-{cat_slug}.html" class="back">← {cat_name}</a>
 <div class="layout">
 <div><div class="gallery">{img_tag}</div>
@@ -300,7 +346,7 @@ for slug, pdata in data.items():
 <div class="apps"><h2>Сферы применения</h2><div class="app-grid">{apps_html}</div></div>
 </div>
 </div>
-</div></div>
+</div></main>
 <footer class="footer"><div class="footer-inner"><span>© 2026 Zorgtech</span><ul class="footer-links"><li><a href="about.html">О компании</a></li><li><a href="blog.html">Блог</a></li><li><a href="support.html">Поддержка</a></li><li><a href="contacts.html">Контакты</a></li></ul></div></footer>
 <script>const h=document.documentElement,b=document.getElementById('t');b.addEventListener('click',()=>{{const n=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=n;try{{localStorage.setItem('zorgtech-theme',n)}}catch(e){{}}}});try{{const s=localStorage.getItem('zorgtech-theme');if(s)h.dataset.theme=s}}catch(e){{}}</script>
 <button class="menu-btn" id="menuBtn" onclick="document.getElementById('mobileNav').classList.toggle('open')"><span></span></button>

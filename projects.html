@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Проекты — Zorgtech</title>
+<meta name="description" content="1200+ реализованных проектов Zorgtech: аэропорты, музеи, поликлиники, банки и промышленные предприятия по всей России.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Реализованные проекты — Zorgtech">
+<meta property="og:description" content="1200+ проектов: аэропорты, музеи, поликлиники, банки, промышленные предприятия.">
+<meta property="og:image" content="https://zorgtech.com/img/ad892332ab2c9820671bd13fd80ddcfd.png">
+<meta property="og:url" content="https://zorgtech.com/projects.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&display=swap" rel="stylesheet">
@@ -27,6 +34,9 @@ body{font-family:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFon
 .project-meta{font-size:11px;font-weight:400;color:var(--tx3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
 .project h2{font-family:'Inter',ui-sans-serif;font-size:28px;font-weight:600;color:var(--tx);letter-spacing:-0.02em;line-height:1.14;margin-bottom:8px}
 .project p{font-size:14px;color:var(--tx2);line-height:1.43}
+.project-visual{aspect-ratio:4/3;border-radius:20px;background:var(--bg-el);display:flex;align-items:center;justify-content:center}
+.project-visual span{font-family:'Inter',ui-sans-serif;font-size:64px;font-weight:600;letter-spacing:-0.03em;color:var(--bg-el-h)}
+@media(max-width:1024px){.project-visual{display:none}}
 .footer{padding:40px;font-size:12px;color:var(--tx3);margin-top:80px}.footer-inner{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}.footer-links{display:flex;gap:28px;list-style:none}.footer-links a{color:var(--tx2);text-decoration:none}.footer-links a:hover{color:var(--tx)}
 @media(max-width:1024px){.project{grid-template-columns:1fr;gap:16px}}
 @media(max-width:640px){.nav-links{display:none}.page{padding:80px 20px 40px}.page-title{font-size:40px}.project{padding:28px 24px}}
@@ -35,25 +45,25 @@ body{font-family:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFon
 <body>
 <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">Zorgtech</a><ul class="nav-links"><li><a href="catalog.html">Продукция</a></li><li><a href="solutions.html">Решения</a></li><li><a href="projects.html" class="active">Проекты</a></li><li><a href="about.html">О компании</a></li><li><a href="contacts.html">Контакты</a></li><li><button class="toggle" id="t" aria-label="Тема"></button></li></ul></div></nav>
 <div class="mobile-nav" id="mobileNav"><a href="index.html">Главная</a><a href="catalog.html">Продукция</a><a href="solutions.html">Решения</a><a href="projects.html">Проекты</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a></div>
-<div class="page"><div class="page-inner">
+<main class="page"><div class="page-inner">
 <a href="index.html" class="back">← На главную</a>
 <p class="page-label">Проекты</p>
 <h1 class="page-title">Оборудование<br>в деле</h1>
 <p class="page-lead">Наши терминалы работают в аэропортах, музеях, на заводах и в поликлиниках по всей стране.</p>
 <div class="stat-line"><div class="stat">1200+<span>проектов</span></div><div class="stat">70+<span>сервисных центров</span></div><div class="stat">3<span>страны</span></div><div class="stat">13<span>лет опыта</span></div></div>
 <div class="projects">
-<div class="project"><div><p class="project-meta">Транспорт</p><h2>Аэропорт Курумоч</h2><p>Стойки регистрации и информационные терминалы в зоне вылета.</p></div><div></div></div>
-<div class="project"><div></div><div><p class="project-meta">Культура</p><h2>Музей Государственной Думы</h2><p>Интерактивная экспозиция с архивными документами и мультимедиа.</p></div></div>
-<div class="project"><div><p class="project-meta">Транспорт</p><h2>Автовокзал Саларьево</h2><p>Автоматизация продажи билетов и информирования пассажиров для Мосгортранса.</p></div><div></div></div>
-<div class="project"><div></div><div><p class="project-meta">Промышленность</p><h2>АО «Силовые машины»</h2><p>Оснащение рабочих мест интерактивными киосками на производстве.</p></div></div>
-<div class="project"><div><p class="project-meta">Медицина</p><h2>Поликлиники Москвы</h2><p>Масштабный проект: бесконтактные дезинфекторы и интерактивные столы в новых поликлиниках.</p></div><div></div></div>
-<div class="project"><div></div><div><p class="project-meta">Промышленность</p><h2>Nordgold</h2><p>Автоматизация промышленных процессов в международной золотодобывающей компании.</p></div></div>
-<div class="project"><div><p class="project-meta">Культура</p><h2>Музей «Государева Дорога»</h2><p>Создание интерактивной экспозиции в храмовом комплексе «Завидово».</p></div><div></div></div>
-<div class="project"><div></div><div><p class="project-meta">Нефтегаз</p><h2>Телемедицина для месторождений</h2><p>Интерактивные киоски для удалённых медицинских консультаций на нефтяных и газовых объектах.</p></div></div>
-<div class="project"><div><p class="project-meta">Банки</p><h2>Новые стандарты обслуживания</h2><p>Внедрение современных стандартов банковского обслуживания через сенсорные терминалы.</p></div><div></div></div>
-<div class="project"><div></div><div><p class="project-meta">Образование</p><h2>Безопасный доступ</h2><p>Обеспечение бесконтактными дезинфекторами образовательных учреждений.</p></div></div>
+<div class="project"><div><p class="project-meta">Транспорт</p><h2>Аэропорт Курумоч</h2><p>Стойки регистрации и информационные терминалы в зоне вылета.</p></div><div class="project-visual"><span>01</span></div></div>
+<div class="project"><div class="project-visual"><span>02</span></div><div><p class="project-meta">Культура</p><h2>Музей Государственной Думы</h2><p>Интерактивная экспозиция с архивными документами и мультимедиа.</p></div></div>
+<div class="project"><div><p class="project-meta">Транспорт</p><h2>Автовокзал Саларьево</h2><p>Автоматизация продажи билетов и информирования пассажиров для Мосгортранса.</p></div><div class="project-visual"><span>03</span></div></div>
+<div class="project"><div class="project-visual"><span>04</span></div><div><p class="project-meta">Промышленность</p><h2>АО «Силовые машины»</h2><p>Оснащение рабочих мест интерактивными киосками на производстве.</p></div></div>
+<div class="project"><div><p class="project-meta">Медицина</p><h2>Поликлиники Москвы</h2><p>Масштабный проект: бесконтактные дезинфекторы и интерактивные столы в новых поликлиниках.</p></div><div class="project-visual"><span>05</span></div></div>
+<div class="project"><div class="project-visual"><span>06</span></div><div><p class="project-meta">Промышленность</p><h2>Nordgold</h2><p>Автоматизация промышленных процессов в международной золотодобывающей компании.</p></div></div>
+<div class="project"><div><p class="project-meta">Культура</p><h2>Музей «Государева Дорога»</h2><p>Создание интерактивной экспозиции в храмовом комплексе «Завидово».</p></div><div class="project-visual"><span>07</span></div></div>
+<div class="project"><div class="project-visual"><span>08</span></div><div><p class="project-meta">Нефтегаз</p><h2>Телемедицина для месторождений</h2><p>Интерактивные киоски для удалённых медицинских консультаций на нефтяных и газовых объектах.</p></div></div>
+<div class="project"><div><p class="project-meta">Банки</p><h2>Новые стандарты обслуживания</h2><p>Внедрение современных стандартов банковского обслуживания через сенсорные терминалы.</p></div><div class="project-visual"><span>09</span></div></div>
+<div class="project"><div class="project-visual"><span>10</span></div><div><p class="project-meta">Образование</p><h2>Безопасный доступ</h2><p>Обеспечение бесконтактными дезинфекторами образовательных учреждений.</p></div></div>
 </div>
-</div></div>
+</div></main>
 <footer class="footer"><div class="footer-inner"><span>© 2026 Zorgtech</span><ul class="footer-links"><li><a href="about.html">О компании</a></li><li><a href="blog.html">Блог</a></li><li><a href="support.html">Поддержка</a></li><li><a href="contacts.html">Контакты</a></li></ul></div></footer>
 <script>const h=document.documentElement,b=document.getElementById('t');b.addEventListener('click',()=>{const n=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=n;try{localStorage.setItem('zorgtech-theme',n)}catch(e){}});try{const s=localStorage.getItem('zorgtech-theme');if(s)h.dataset.theme=s}catch(e){}</script>
 <button class="menu-btn" id="menuBtn" onclick="document.getElementById('mobileNav').classList.toggle('open')"><span></span></button>
