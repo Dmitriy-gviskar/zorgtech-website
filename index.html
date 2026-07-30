@@ -70,6 +70,10 @@ body{
 .btn-text{background:transparent;color:#0071e3}
 .btn-text:hover{background:rgba(0,113,227,.06)}
 
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
 /* ── SECTIONS ── */
 .section{padding:120px 40px}
 .section-alt{background:#f5f5f7}
@@ -349,5 +353,38 @@ body{
   </div>
 </footer>
 
+<script>
+/* Staggered reveal */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+/* Counter animation */
+document.querySelectorAll('.benefit-num').forEach(el=>{
+  const text=el.textContent.trim(),m=text.match(/^(\d+)(\+?)$/);
+  if(!m)return;
+  const target=parseInt(m[1]),suffix=m[2],dur=1500;
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      const start=performance.now();
+      function tick(now){const p=Math.min((now-start)/dur,1),eased=1-Math.pow(1-p,3);el.textContent=Math.round(target*eased)+suffix;if(p<1)requestAnimationFrame(tick)}
+      requestAnimationFrame(tick);obs.unobserve(el)
+    })
+  },{threshold:.5});
+  obs.observe(el)
+});
+
+/* Magnetic buttons */
+document.querySelectorAll('.btn-primary').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;
+    btn.style.transform=`translate(${x*.15}px,${y*.15}px) scale(1.02)`;
+    btn.style.transition='transform .15s ease-out'
+  });
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='translate(0,0) scale(1)';btn.style.transition='transform .4s ease'})
+});
+</script>
 </body>
 </html>
