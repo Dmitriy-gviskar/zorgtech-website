@@ -13,7 +13,7 @@ for slug, cat in data.items():
     products_html = ""
     for p in cat['products']:
         img_src = f"img/{os.path.basename(p['img'])}" if p['img'] else ""
-        products_html += f'<a href="https://zorgtech.com/catalog/product/{p["slug"]}/" class="card" target="_blank"><div class="card-img"><img src="{img_src}" alt="{p["name"]}" loading="lazy"></div><h3>{p["name"]}</h3></a>\n'
+        products_html += f'<a href="product-{p["slug"]}.html" class="card" ><div class="card-img"><img src="{img_src}" alt="{p["name"]}" loading="lazy"></div><h3>{p["name"]}</h3></a>\n'
     
     html = f"""<!DOCTYPE html><html lang="ru" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>{cat['name']} — Zorgtech</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
